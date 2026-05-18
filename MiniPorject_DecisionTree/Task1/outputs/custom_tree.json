@@ -1,0 +1,146 @@
+{
+  "leaf": false,
+  "feature": "tear_rate",
+  "info_gain": 0.5488,
+  "samples": 24,
+  "distribution": {
+    "no lenses": 15,
+    "soft": 5,
+    "hard": 4
+  },
+  "children": {
+    "reduced": {
+      "leaf": true,
+      "prediction": "no lenses",
+      "samples": 12,
+      "distribution": {
+        "no lenses": 12
+      }
+    },
+    "normal": {
+      "leaf": false,
+      "feature": "astigmatic",
+      "info_gain": 0.7704,
+      "samples": 12,
+      "distribution": {
+        "soft": 5,
+        "hard": 4,
+        "no lenses": 3
+      },
+      "children": {
+        "no": {
+          "leaf": false,
+          "feature": "age",
+          "info_gain": 0.3167,
+          "samples": 6,
+          "distribution": {
+            "soft": 5,
+            "no lenses": 1
+          },
+          "children": {
+            "young": {
+              "leaf": true,
+              "prediction": "soft",
+              "samples": 2,
+              "distribution": {
+                "soft": 2
+              }
+            },
+            "pre": {
+              "leaf": true,
+              "prediction": "soft",
+              "samples": 2,
+              "distribution": {
+                "soft": 2
+              }
+            },
+            "presbyopic": {
+              "leaf": false,
+              "feature": "prescription",
+              "info_gain": 1.0,
+              "samples": 2,
+              "distribution": {
+                "no lenses": 1,
+                "soft": 1
+              },
+              "children": {
+                "myope": {
+                  "leaf": true,
+                  "prediction": "no lenses",
+                  "samples": 1,
+                  "distribution": {
+                    "no lenses": 1
+                  }
+                },
+                "hyper": {
+                  "leaf": true,
+                  "prediction": "soft",
+                  "samples": 1,
+                  "distribution": {
+                    "soft": 1
+                  }
+                }
+              }
+            }
+          }
+        },
+        "yes": {
+          "leaf": false,
+          "feature": "prescription",
+          "info_gain": 0.4591,
+          "samples": 6,
+          "distribution": {
+            "hard": 4,
+            "no lenses": 2
+          },
+          "children": {
+            "myope": {
+              "leaf": true,
+              "prediction": "hard",
+              "samples": 3,
+              "distribution": {
+                "hard": 3
+              }
+            },
+            "hyper": {
+              "leaf": false,
+              "feature": "age",
+              "info_gain": 0.9183,
+              "samples": 3,
+              "distribution": {
+                "hard": 1,
+                "no lenses": 2
+              },
+              "children": {
+                "young": {
+                  "leaf": true,
+                  "prediction": "hard",
+                  "samples": 1,
+                  "distribution": {
+                    "hard": 1
+                  }
+                },
+                "pre": {
+                  "leaf": true,
+                  "prediction": "no lenses",
+                  "samples": 1,
+                  "distribution": {
+                    "no lenses": 1
+                  }
+                },
+                "presbyopic": {
+                  "leaf": true,
+                  "prediction": "no lenses",
+                  "samples": 1,
+                  "distribution": {
+                    "no lenses": 1
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,125 @@
+Bisecting K-Means - Run Summary
+============================================================
+
+Input file       : C:\Users\hp\OneDrive - Ethiopian Capital Market Authority (ECMA)\Desktop\AI -Code\MiniProject_Clustering\Task1\places.txt
+Map image        : C:\Users\hp\OneDrive - Ethiopian Capital Market Authority (ECMA)\Desktop\AI -Code\MiniProject_Clustering\Task1\Portland.png
+# of places      : 69
+k                : 5
+Random seed      : 42
+Distance metric  : haversine (great-circle, km)
+
+SSE history (after each split):
+  After 1 cluster(s): SSE = 5290.911133
+  After 2 cluster(s): SSE = 3043.263316
+  After 3 cluster(s): SSE = 2172.483521
+  After 4 cluster(s): SSE = 1708.099388
+  After 5 cluster(s): SSE = 1333.846602
+
+Final total SSE  : 1333.846602
+
+Per-cluster breakdown:
+  Cluster 0:   7 place(s), SSE = 199.9575, mean dist =  4.19 km, cities = {Portland, OR}
+  Cluster 1:  14 place(s), SSE = 341.5805, mean dist =  3.78 km, cities = {Boring, OR, Gresham, OR, Portland, OR}
+  Cluster 2:  15 place(s), SSE = 578.1235, mean dist =  5.68 km, cities = {Beaverton, OR, Milwaukie, OR, Portland, OR, Tigard, OR, Tualatin, OR}
+  Cluster 3:  17 place(s), SSE =  78.5795, mean dist =  1.94 km, cities = {Portland, OR}
+  Cluster 4:  16 place(s), SSE = 135.6056, mean dist =  2.59 km, cities = {Portland, OR}
+
+Centroids (longitude, latitude):
+  C0:  lon = -122.720724,  lat = 45.590118
+  C1:  lon = -122.513802,  lat = 45.495246
+  C2:  lon = -122.728802,  lat = 45.458867
+  C3:  lon = -122.655764,  lat = 45.515922
+  C4:  lon = -122.579209,  lat = 45.539451
+
+Elbow sweep (k -> SSE):
+  k =  1  SSE = 5290.911133
+  k =  2  SSE = 3043.263316
+  k =  3  SSE = 2172.483521
+  k =  4  SSE = 1708.099388
+  k =  5  SSE = 1333.846602
+  k =  6  SSE = 1001.407603
+  k =  7  SSE = 800.749169
+  k =  8  SSE = 648.971863
+  k =  9  SSE = 516.039976
+  k = 10  SSE = 435.158385
+
+Full cluster membership:
+
+[Cluster 0]
+  - Bottoms Up                    (Portland, OR) [45.64683, -122.84292]
+  - Casa Diablo                   (Portland, OR) [45.54302, -122.72083]
+  - Dancin' Bare                  (Portland, OR) [45.58412, -122.68273]
+  - Exotica                       (Portland, OR) [45.58305, -122.66835]
+  - Landing Strip                 (Portland, OR) [45.59504, -122.72883]
+  - Oh Zone                       (Portland, OR) [45.59507, -122.72896]
+  - Rooster's                     (Portland, OR) [45.58369, -122.67246]
+
+[Cluster 1]
+  - Full Moon Bar and Grill       (Boring, OR) [45.43032, -122.37630]
+  - 505 Club                      (Gresham, OR) [45.50762, -122.42555]
+  - Cabaret II                    (Portland, OR) [45.51914, -122.48248]
+  - Double Dribble                (Portland, OR) [45.49775, -122.52407]
+  - Dream on Saloon               (Portland, OR) [45.51914, -122.49967]
+  - G-Spot Southeast              (Portland, OR) [45.48482, -122.58921]
+  - Heat                          (Portland, OR) [45.48964, -122.53820]
+  - Hush Playhouse                (Portland, OR) [45.49777, -122.52398]
+  - Montego's                     (Portland, OR) [45.50445, -122.50003]
+  - Pallas Club                   (Portland, OR) [45.49799, -122.52285]
+  - Secret Rendezvous             (Portland, OR) [45.50409, -122.53448]
+  - Shimmers                      (Portland, OR) [45.48384, -122.58161]
+  - Soobie's                      (Portland, OR) [45.52016, -122.53779]
+  - Tommy's Too                   (Portland, OR) [45.47672, -122.55701]
+
+[Cluster 2]
+  - Dolphin II                    (Beaverton, OR) [45.48650, -122.78835]
+  - Hotties                       (Beaverton, OR) [45.49315, -122.78102]
+  - Pussycats                     (Beaverton, OR) [45.49819, -122.76615]
+  - Stars Cabaret                 (Beaverton, OR) [45.48594, -122.80031]
+  - Sunset Strip                  (Beaverton, OR) [45.50820, -122.78185]
+  - Vegas VIP Room                (Beaverton, OR) [45.49340, -122.77963]
+  - Dolphin                       (Milwaukie, OR) [45.39907, -122.61889]
+  - Dolphin III                   (Milwaukie, OR) [45.42707, -122.63416]
+  - Acropolis                     (Portland, OR) [45.46217, -122.63885]
+  - Boom Boom Room                (Portland, OR) [45.46483, -122.69921]
+  - Lure                          (Portland, OR) [45.44523, -122.73261]
+  - Private Pleasures             (Portland, OR) [45.44644, -122.73103]
+  - Riverside Corral              (Portland, OR) [45.46434, -122.66029]
+  - Stars Cabaret Bridgeport      (Tigard, OR) [45.42579, -122.76575]
+  - Jiggles                       (Tualatin, OR) [45.38268, -122.75393]
+
+[Cluster 3]
+  - Blush                         (Portland, OR) [45.48540, -122.64659]
+  - Cabaret Lounge                (Portland, OR) [45.52309, -122.67553]
+  - Carnaval                      (Portland, OR) [45.52068, -122.67421]
+  - Club Rouge                    (Portland, OR) [45.52056, -122.67561]
+  - Glimmers                      (Portland, OR) [45.49692, -122.62792]
+  - Golden Dragon Exotic Club     (Portland, OR) [45.52071, -122.67419]
+  - Lucky Devil Lounge            (Portland, OR) [45.50158, -122.65931]
+  - Magic Garden                  (Portland, OR) [45.52469, -122.67447]
+  - Mary's Club                   (Portland, OR) [45.53510, -122.66739]
+  - Mynt Gentlemen's Club         (Portland, OR) [45.53243, -122.62887]
+  - Nicolai Street Clubhouse      (Portland, OR) [45.54010, -122.64111]
+  - Rose City Strip               (Portland, OR) [45.49660, -122.62769]
+  - Safari Show Club              (Portland, OR) [45.49709, -122.63458]
+  - Sassy's Bar &amp; Grill       (Portland, OR) [45.51723, -122.65637]
+  - Spyce Gentleman's Club        (Portland, OR) [45.52337, -122.67239]
+  - The Hawthorne Strip           (Portland, OR) [45.51222, -122.65553]
+  - Union Jacks                   (Portland, OR) [45.52290, -122.65625]
+
+[Cluster 4]
+  - Chantilly Lace                (Portland, OR) [45.56271, -122.59308]
+  - Club 205                      (Portland, OR) [45.51905, -122.56151]
+  - Devil's Point                 (Portland, OR) [45.49536, -122.60837]
+  - DV8                           (Portland, OR) [45.49750, -122.61118]
+  - Frolics                       (Portland, OR) [45.55538, -122.57148]
+  - G-Spot Airport                (Portland, OR) [45.55426, -122.57417]
+  - G-Spot Northeast              (Portland, OR) [45.54723, -122.57875]
+  - Honeysuckle's Lingerie        (Portland, OR) [45.54865, -122.57873]
+  - JD's Bar &amp; Grill          (Portland, OR) [45.55581, -122.60088]
+  - Jody's Bar And Grill          (Portland, OR) [45.52631, -122.53883]
+  - Mr. Peeps                     (Portland, OR) [45.52786, -122.53773]
+  - Mystic                        (Portland, OR) [45.51904, -122.56128]
+  - Pirates Cove                  (Portland, OR) [45.54929, -122.58651]
+  - Pussycats                     (Portland, OR) [45.54734, -122.57874]
+  - Sugar Shack                   (Portland, OR) [45.56270, -122.59305]
+  - Video Visions                 (Portland, OR) [45.56271, -122.59308]

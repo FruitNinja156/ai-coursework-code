@@ -1,0 +1,29 @@
+◆ split on 'tear_rate' (IG=0.5488, samples=24)
+│
+│   ├── [tear_rate = reduced] → 🍃 PREDICT 'no lenses'  (samples=12, [no lenses:12])
+│
+    └── [tear_rate = normal] → ◆ split on 'astigmatic' (IG=0.7704, samples=12)
+        │
+    │   ├── [astigmatic = no] → ◆ split on 'age' (IG=0.3167, samples=6)
+    │       │
+    │   │   ├── [age = young] → 🍃 PREDICT 'soft'  (samples=2, [soft:2])
+    │       │
+    │   │   ├── [age = pre] → 🍃 PREDICT 'soft'  (samples=2, [soft:2])
+    │       │
+    │       └── [age = presbyopic] → ◆ split on 'prescription' (IG=1.0000, samples=2)
+    │           │
+    │       │   ├── [prescription = myope] → 🍃 PREDICT 'no lenses'  (samples=1, [no lenses:1])
+    │           │
+    │           └── [prescription = hyper] → 🍃 PREDICT 'soft'  (samples=1, [soft:1])
+        │
+        └── [astigmatic = yes] → ◆ split on 'prescription' (IG=0.4591, samples=6)
+            │
+        │   ├── [prescription = myope] → 🍃 PREDICT 'hard'  (samples=3, [hard:3])
+            │
+            └── [prescription = hyper] → ◆ split on 'age' (IG=0.9183, samples=3)
+                │
+            │   ├── [age = young] → 🍃 PREDICT 'hard'  (samples=1, [hard:1])
+                │
+            │   ├── [age = pre] → 🍃 PREDICT 'no lenses'  (samples=1, [no lenses:1])
+                │
+                └── [age = presbyopic] → 🍃 PREDICT 'no lenses'  (samples=1, [no lenses:1])
